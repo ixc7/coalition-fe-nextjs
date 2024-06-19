@@ -10,9 +10,11 @@
     "format": "printf \"\\x1Bc\\x1b[3J\" && prettier --bracket-same-line --single-attribute-per-line --no-semi --write app/* ; git status"
   },
   "dependencies": {
+    "chart.js": "^4.4.3",
+    "next": "14.2.4",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.4"
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18"
   },
   "devDependencies": {
     "typescript": "^5",

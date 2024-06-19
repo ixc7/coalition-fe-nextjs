@@ -1,20 +1,6 @@
-const listItems = [
-  {
-    problem: "Hypertension",
-    description: "Chronic high blood pressure",
-    status: "Under Observation",
-  },
-  {
-    problem: "Type 2 Diabetes",
-    description: "Insulin resistance and elevated blood sugar",
-    status: "Cured",
-  },
-  {
-    problem: "Asthma",
-    description: "Recurrent episodes of bronchial constriction",
-    status: "Inactive",
-  },
-]
+import data from "../data.json"
+
+const { diagnostic_list } = data
 
 export const DiagnosticList = () => (
   <div className="bg-white mt-8 p-5 rounded-2xl shadow-sm">
@@ -27,9 +13,11 @@ export const DiagnosticList = () => (
         <h2 className="col-span-1">Status</h2>
       </div>
       <div className="max-h-[350px] px-4 overflow-y-scroll">
-        {listItems.map(({ problem, description, status }) => (
-          <div className="py-2.5 grid grid-cols-6">
-            <p className="col-span-2">{problem}</p>
+        {diagnostic_list.map(({ name, description, status }, k) => (
+          <div
+            key={k}
+            className="py-2.5 grid grid-cols-6">
+            <p className="col-span-2">{name}</p>
             <p className="col-span-3">{description}</p>
             <p className="col-span-1">{status}</p>
           </div>

@@ -1,3 +1,8 @@
+import { LineChart } from "./lineChart.tsx"
+
+// arrows are 10px w 5px h
+// chart circles are 14px w 14px h
+
 export const DiagnosisHistory = () => (
   <div className="bg-white p-5 rounded-2xl shadow-sm">
     <h1 className="text-2xl font-extrabold">Diagnosis History</h1>
@@ -5,12 +10,36 @@ export const DiagnosisHistory = () => (
     <div className="mt-10 grid grid-cols-3 gap-5">
       <div
         className="
-        col-span-full aspect-video p-4 rounded-xl bg-[#F4F0FE]
+        col-span-full p-4 rounded-xl bg-[#F4F0FE]
         grid grid-cols-subgrid gap-5
       ">
-        <div className="col-span-2">Blood Pressure</div>
-        <div className="col-span-1">Systolic Diastolic</div>
+        <div className="col-span-2">
+          <div className="flex justify-between">
+            <h1 className="font-bold text-[1.125rem]">Blood Pressure chart</h1>
+            <ul>Last 6 months</ul>
+          </div>
+          <LineChart />
+        </div>
+        <div className="col-span-1">
+          <div className="flex items-center gap-1 mb-2">
+            <div className="w-3.5 h-3.5 bg-[#E66FD2] rounded-full" />
+            <h2 className="font-bold text-[0.875rem]">Systolic</h2>
+          </div>
+          <p className="text-[1.375rem] font-bold mb-2">160</p>
+          <p className="text-[0.875rem]">Higher than Average</p>
+
+          <hr className="my-[1.125rem]" />
+
+          <div className="flex items-center gap-1 mb-2">
+            <div className="w-3.5 h-3.5 bg-[#8C6FE6] rounded-full" />
+            <h2 className="font-bold text-[0.875rem]">Diastolic</h2>
+          </div>
+
+          <p className="text-[1.375rem] font-bold mb-2">78</p>
+          <p className="text-[0.875rem]">Lower than Average</p>
+        </div>
       </div>
+
       <div className="col-span-1 aspect-square p-4 rounded-xl bg-[#E0F3FA]">
         <div
           className="w-24 h-24 rounded-full bg-cover"
