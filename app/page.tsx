@@ -56,6 +56,92 @@ const PatientCard = () => (
   </div>
 )
 
+const Patients = () => (
+  <>
+    <div className="flex bg-red-100 items-center justify-between">
+      <h1 className="text-2xl font-extrabold">Patients</h1>
+      <div className="h-[1.125rem] w-[1.125rem] bg-red-800" />
+    </div>
+
+    <div className="bg-red-900 mt-10 max-h-[1054px] overflow-y-scroll">
+      {Array.from(Array(25)).map((i) => (
+        <PatientCard />
+      ))}
+    </div>
+  </>
+)
+
+const DiagnosisHistory = () => (
+  <>
+    <h1 className="text-2xl font-extrabold">Diagnosis History</h1>
+
+    <div className="bg-red-800 mt-10 grid grid-cols-3 gap-5">
+      <div className="bg-red-600 col-span-full aspect-video">
+        Blood Pressure
+      </div>
+      <div className="col-span-1 bg-red-700 aspect-square">
+        Respiratory Rate
+      </div>
+      <div className="col-span-1 bg-red-700 aspect-square">Temperature</div>
+      <div className="col-span-1 bg-red-700 aspect-square">Heart Rate</div>
+    </div>
+  </>
+)
+
+const DiagnosticList = () => (
+  <div className="bg-red-400 mt-8">
+    <h1 className="text-2xl font-extrabold">Diagnostic List</h1>
+
+    <div className="mt-10 p-4 bg-red-200">
+      <div className="bg-red-700 rounded-full mb-2.5">
+        item/diagnosis description status
+      </div>
+      <div className="bg-red-100 max-h-[350px] overflow-y-scroll">
+        {Array.from(Array(20)).map((i) => (
+          <div className="mb-2.5 py-5 bg-red-500">
+            Hypertension Chronic high blood pressure Under Observation
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+)
+
+const PatientInfo = () => (
+  <>
+    <div className="flex flex-col items-center">
+      <div className="bg-red-800 w-[12.5rem] h-[12.5rem] rounded-full" />
+      <h1 className="text-2xl font-extrabold mt-6">Jessica Taylor</h1>
+    </div>
+
+    <div className="bg-red-200">
+      <ProfileDetail />
+      <ProfileDetail />
+      <ProfileDetail />
+      <ProfileDetail />
+      <ProfileDetail />
+    </div>
+
+    <div className="w-[12.5rem] mt-10 mx-auto p-5 rounded-full text-center bg-active-1">
+      Show All Information
+    </div>
+  </>
+)
+
+const LabResults = () => (
+  <div className="bg-red-900 mt-8 p-5 ">
+    <h1 className="text-2xl font-extrabold mb-4">Lab Results</h1>
+    <div className="max-h-[350px] overflow-y-scroll">
+      {Array.from(Array(20)).map((i) => (
+        <div className="py-2.5 px-4 bg-red-700 flex items-center justify-between">
+          <p>Blood Tests</p>
+          <div className="h-5 w-5 bg-red-900" />
+        </div>
+      ))}
+    </div>
+  </div>
+)
+
 const Home = () => {
   return (
     <div
@@ -66,75 +152,17 @@ const Home = () => {
       <NavBar />
 
       <div className="col-span-3 bg-red-400 p-5">
-        <div className="flex bg-red-100 items-center justify-between">
-          <h1 className="text-2xl font-extrabold">Patients</h1>
-          <div className="h-[1.125rem] w-[1.125rem] bg-red-800" />
-        </div>
-
-        <div className="bg-red-900 mt-10 max-h-[1054px] overflow-y-scroll">
-          {Array.from(Array(25)).map((i) => (
-            <PatientCard />
-          ))}
-        </div>
+        <Patients />
       </div>
 
       <div className="col-span-6 bg-red-500 p-5">
-        <h1 className="text-2xl font-extrabold">Diagnosis History</h1>
-
-        <div className="bg-red-800 mt-10 grid grid-cols-3 gap-5">
-          <div className="bg-red-600 col-span-full">Blood Pressure</div>
-          <div className="col-span-1 bg-red-700">Respiratory Rate</div>
-          <div className="col-span-1 bg-red-700">Temperature</div>
-          <div className="col-span-1 bg-red-700">Heart Rate</div>
-        </div>
-
-        <div className="bg-red-400 mt-8">
-          <h1 className="text-2xl font-extrabold">Diagnostic List</h1>
-
-          <div className="mt-10 p-4 bg-red-200">
-            <div className="bg-red-700 rounded-full mb-2.5">
-              item/diagnosis description status
-            </div>
-            <div className="bg-red-100 max-h-[350px] overflow-y-scroll">
-              {Array.from(Array(20)).map((i) => (
-                <div className="mb-2.5 py-5 bg-red-500">
-                  Hypertension Chronic high blood pressure Under Observation
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+        <DiagnosisHistory />
+        <DiagnosticList />
       </div>
 
       <div className="col-span-3 bg-red-300 p-5">
-        <div className="flex flex-col items-center">
-          <div className="bg-red-800 w-[12.5rem] h-[12.5rem] rounded-full" />
-          <h1 className="text-2xl font-extrabold mt-6">Jessica Taylor</h1>
-        </div>
-
-        <div className="bg-red-200">
-          <ProfileDetail />
-          <ProfileDetail />
-          <ProfileDetail />
-          <ProfileDetail />
-          <ProfileDetail />
-        </div>
-
-        <div className="w-[12.5rem] mt-10 mx-auto p-5 rounded-full text-center bg-active-1">
-          Show All Information
-        </div>
-
-        <div className="bg-red-900 mt-8 p-5 ">
-          <h1 className="text-2xl font-extrabold mb-4">Lab Results</h1>
-          <div className="max-h-[300px] overflow-y-scroll">
-            {Array.from(Array(20)).map((i) => (
-              <div className="py-2.5 px-4 bg-red-700 flex items-center justify-between">
-                <p>Blood Tests</p>
-                <div className="h-5 w-5 bg-red-900" />
-              </div>
-            ))}
-          </div>
-        </div>
+        <PatientInfo />
+        <LabResults />
       </div>
     </div>
   )
