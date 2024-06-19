@@ -1,5 +1,10 @@
 import type { Metadata } from "next"
+import { Manrope } from "next/font/google"
 import "./globals.css"
+
+const manrope = Manrope({
+  subsets: ["latin"],
+})
 
 export const metadata: Metadata = {
   title: "Coalition Skills Test",
@@ -12,7 +17,9 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={manrope.className}>
       <body>{children}</body>
     </html>
   )
