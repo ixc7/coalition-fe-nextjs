@@ -124,7 +124,17 @@ const Home = () => {
           Show All Information
         </div>
 
-        <div className="bg-red-900 mt-8 max-h-[300px]">Lab Results</div>
+        <div className="bg-red-900 mt-8 p-5 ">
+          <h1 className="text-2xl font-extrabold mb-4">Lab Results</h1>
+          <div className="max-h-[300px] overflow-y-scroll">
+            {Array.from(Array(20)).map((i) => (
+              <div className="py-2.5 px-4 bg-red-700 flex items-center justify-between">
+                <p>Blood Tests</p>
+                <div className="h-5 w-5 bg-red-900" />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   )
