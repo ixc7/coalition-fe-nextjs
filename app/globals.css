@@ -45,6 +45,10 @@
   background: var(--activestate_bg_1);
 }
 
+.border-color-1 {
+  border-color: var(--color-ededed);
+}
+
 /* Adobe XD Classes */
 .card-title {
   font-style: var(--font-style-normal);
