@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build --no-lint",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "printf \"\\x1Bc\\x1b[3J\" && prettier --bracket-same-line --single-attribute-per-line --no-semi --write app/* ; git status"
   },
   "dependencies": {
     "react": "^18",
