@@ -1,25 +1,27 @@
 const ProfileDetail = ({ className, children }) => (
   <div className="flex mt-8 px-5">
     <div className={`aspect-square w-[2.625rem] mr-4 ${className}`} />
-    <div>
-      {/* <p>Profile Detail</p> */}
-      {/* <p>Lorem Ipsum</p> */}
-      {children}
-    </div>
+    <div>{children}</div>
   </div>
 )
 
 export const PatientInfo = () => (
   <div className="bg-white rounded-2xl px-5 py-8">
     <div className="flex flex-col items-center">
-      <div className="bg-active-1 w-[12.5rem] h-[12.5rem] rounded-full" />
+      <div
+        className="w-[12.5rem] h-[12.5rem] rounded-full"
+        style={{
+          backgroundImage: "url('./Layer 2.png')",
+          backgroundSize: "cover",
+        }}
+      />
       <h1 className="text-2xl font-extrabold mt-6">Jessica Taylor</h1>
     </div>
 
     <div>
       <ProfileDetail className="birth-icon">
         <p>Date Of Birth</p>
-        <p className="font-bold">Audust 23, 1996</p>
+        <p className="font-bold">August 23, 1996</p>
       </ProfileDetail>
       <ProfileDetail className="female-icon">
         <p>Gender</p>

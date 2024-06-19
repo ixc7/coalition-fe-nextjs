@@ -9,7 +9,7 @@ const items = [
 export const LabResults = () => (
   <div className="bg-white mt-8 p-5 rounded-2xl">
     <h1 className="text-2xl font-extrabold mb-4">Lab Results</h1>
-    <div className="relative max-h-[420px] overflow-y-scroll">
+    <div className="relative max-h-[300px] overflow-y-scroll">
       {items.map((i) => (
         <div className="py-2.5 px-4 flex items-center justify-between">
           <p>{i}</p>

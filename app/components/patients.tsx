@@ -68,7 +68,7 @@ export const Patients = () => (
       <div className="h-[1.125rem] w-[1.125rem]" />
     </div>
 
-    <div className="mt-10 max-h-[1054px] overflow-y-scroll">
+    <div className="mt-10 max-h-[1000px] overflow-y-scroll">
       {profiles.map(({ name, info, img }) => (
         <div className="relative flex items-center py-4 px-5 patient-card">
           <div

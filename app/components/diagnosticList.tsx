@@ -21,7 +21,7 @@ export const DiagnosticList = () => (
     <h1 className="text-2xl font-extrabold">Diagnostic List</h1>
 
     <div className="mt-10">
-      <div className="bg-active-1 rounded-3xl p-4 mb-2.5 font-bold grid grid-cols-6">
+      <div className="bg-[#F6F7F8] rounded-3xl p-4 mb-2.5 font-bold grid grid-cols-6">
         <h2 className="col-span-2">Problem/Diagnosis</h2>
         <h2 className="col-span-3">Description</h2>
         <h2 className="col-span-1">Status</h2>
