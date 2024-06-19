@@ -45,6 +45,17 @@ const ProfileDetail = () => (
   </div>
 )
 
+const PatientCard = () => (
+  <div className="relative flex items-center mb-8 bg-red-600">
+    <div className="bg-red-200 w-12 h-12 rounded-full mr-3" />
+    <div className="bg-red-300">
+      <p>Firstname Lastname</p>
+      <p>Gender, Age</p>
+    </div>
+    <div className="absolute right-0 w-[1.125rem] bg-red-800">...</div>
+  </div>
+)
+
 const Home = () => {
   return (
     <div
@@ -53,12 +64,18 @@ const Home = () => {
       max-w-[1600px]  
     ">
       <NavBar />
+
       <div className="col-span-3 bg-red-400 p-5">
         <div className="flex bg-red-100 items-center justify-between">
           <h1 className="text-2xl font-extrabold">Patients</h1>
           <div className="h-[1.125rem] w-[1.125rem] bg-red-800" />
         </div>
-        <div className="bg-red-600 mt-10">profiles</div>
+
+        <div className="bg-red-900 mt-10 max-h-svh overflow-y-scroll">
+          {Array.from(Array(25)).map((i) => (
+            <PatientCard />
+          ))}
+        </div>
       </div>
 
       <div className="col-span-6 bg-red-500 p-5">
