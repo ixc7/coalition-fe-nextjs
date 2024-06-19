@@ -106,3 +106,81 @@ body {
   color: rgb(var(--text-primary));
   background: var(--bg-body);
 }
+
+.svg-icon {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.test-logo {
+  background-image: url("../public/TestLogo.svg");
+  background-position: left center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.home-icon {
+  @apply svg-icon;
+  background-image: url("../public/home_FILL0_wght300_GRAD0_opsz24.svg");
+}
+
+.patients-icon {
+  @apply svg-icon;
+  background-image: url("../public/group_FILL0_wght300_GRAD0_opsz24.svg");
+}
+
+.calendar-icon {
+  @apply svg-icon;
+  background-image: url("../public/calendar_today_FILL0_wght300_GRAD0_opsz24.svg");
+}
+
+.message-icon {
+  @apply svg-icon;
+  background-image: url("../public/chat_bubble_FILL0_wght300_GRAD0_opsz24.svg");
+}
+
+.credit-card-icon {
+  @apply svg-icon;
+  background-image: url("../public/credit_card_FILL0_wght300_GRAD0_opsz24.svg");
+}
+
+.more-horizontal-icon {
+  @apply svg-icon;
+  background-image: url("../public/more_horiz_FILL0_wght300_GRAD0_opsz24.svg");
+}
+
+.more-vertical-icon {
+  @apply svg-icon;
+  background-image: url("../public/more_vert_FILL0_wght300_GRAD0_opsz24.svg");
+}
+
+.settings-icon {
+  @apply svg-icon;
+  background-image: url("../public/settings_FILL0_wght300_GRAD0_opsz24.svg");
+}
+
+.download-icon {
+  @apply svg-icon;
+  background-image: url("../public/download_FILL0_wght300_GRAD0_opsz24 (1).svg");
+}
+
+.female-icon {
+  @apply svg-icon;
+  background-image: url("../public/FemaleIcon.svg");
+}
+
+.birth-icon {
+  @apply svg-icon;
+  background-image: url("../public/BirthIcon.svg");
+}
+
+.phone-icon {
+  @apply svg-icon;
+  background-image: url("../public/PhoneIcon.svg");
+}
+
+.insurance-icon {
+  @apply svg-icon;
+  background-image: url("../public/InsuranceIcon.svg");
+}

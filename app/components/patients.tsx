@@ -5,7 +5,7 @@ const PatientCard = () => (
       <p>Firstname Lastname</p>
       <p>Gender, Age</p>
     </div>
-    <div className="absolute right-0 w-[1.125rem]">...</div>
+    <div className="absolute right-0 w-[1.125rem] h-1 more-horizontal-icon" />
   </div>
 )
 

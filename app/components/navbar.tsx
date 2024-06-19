@@ -1,7 +1,7 @@
-const NavButton = () => (
-  <div className="py-3 px-4 rounded-full flex gap-2 body-emphasized bg-active-1">
-    <div className="h-5">X</div>
-    <div>Patients</div>
+const NavButton = ({ className, children }) => (
+  <div className="py-3 px-4 rounded-full flex gap-2 items-center body-emphasized bg-active-1">
+    <div className={`aspect-square w-5 ${className}`} />
+    <div>{children}</div>
   </div>
 )
 
@@ -13,14 +13,14 @@ export const NavBar = () => (
     rounded-[4.375rem]
   ">
     <div className="col-span-3">
-      <div className="h-12">left logo</div>
+      <div className="h-12 test-logo"></div>
     </div>
     <div className="col-span-6 flex justify-around gap-2 px-5">
-      <NavButton />
-      <NavButton />
-      <NavButton />
-      <NavButton />
-      <NavButton />
+      <NavButton className="home-icon">Overview</NavButton>
+      <NavButton className="patients-icon">Patients</NavButton>
+      <NavButton className="calendar-icon">Schedule</NavButton>
+      <NavButton className="message-icon">Message</NavButton>
+      <NavButton className="credit-card-icon">Transactions</NavButton>
     </div>
 
     <div className="col-span-3 flex items-center justify-end">
@@ -29,8 +29,8 @@ export const NavBar = () => (
         <p>Dr. Jose Simmons</p>
         <p>General Practitioner</p>
       </div>
-      <div className="h-5 mr-2">X</div>
-      <div>.</div>
+      <div className="aspect-square w-5 mr-3 settings-icon" />
+      <div className="h-5 w-1 more-vertical-icon" />
     </div>
   </div>
 )
