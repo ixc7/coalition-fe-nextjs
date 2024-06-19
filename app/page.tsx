@@ -10,7 +10,7 @@ const NavBar = () => (
     className="
     col-span-full bg-red-700 px-8 py-4 
     grid grid-cols-subgrid gap-8
-    shadow-xl rounded-full
+    shadow-xl rounded-[4.375rem]
   ">
     <div className="col-span-3 bg-red-100">
       <div className="h-12 bg-red-300">left logo</div>
@@ -35,18 +35,8 @@ const NavBar = () => (
   </div>
 )
 
-const ProfileDetail = () => (
-  <div className="bg-red-300 flex mt-8">
-    <div className="h-[2.625rem] w-[2.625rem] bg-red-900 rounded-full mr-4" />
-    <div>
-      <p>Profile Detail</p>
-      <p>Lorem Ipsum</p>
-    </div>
-  </div>
-)
-
 const PatientCard = () => (
-  <div className="relative flex items-center mb-8 bg-red-600">
+  <div className="relative flex items-center mb-8 bg-red-600 patient-card">
     <div className="bg-red-200 w-12 h-12 rounded-full mr-3" />
     <div className="bg-red-300">
       <p>Firstname Lastname</p>
@@ -72,28 +62,41 @@ const Patients = () => (
 )
 
 const DiagnosisHistory = () => (
-  <>
+  <div className="bg-red-400 p-5 rounded-2xl">
     <h1 className="text-2xl font-extrabold">Diagnosis History</h1>
 
-    <div className="bg-red-800 mt-10 grid grid-cols-3 gap-5">
-      <div className="bg-red-600 col-span-full aspect-video">
+    <div className="mt-10 grid grid-cols-3 gap-5">
+      <div className="bg-red-600 col-span-full aspect-video p-4 rounded-xl">
         Blood Pressure
       </div>
-      <div className="col-span-1 bg-red-700 aspect-square">
-        Respiratory Rate
+      <div className="col-span-1 bg-red-700 aspect-square p-4 rounded-xl">
+        <div className="w-24 h-24 rounded-full bg-red-500" />
+        <p>Respiratory Rate</p>
+        <h1 className="text-3xl font-extrabold">20 bpm</h1>
+        <p>Normal</p>
       </div>
-      <div className="col-span-1 bg-red-700 aspect-square">Temperature</div>
-      <div className="col-span-1 bg-red-700 aspect-square">Heart Rate</div>
+      <div className="col-span-1 bg-red-700 aspect-square p-4 rounded-xl">
+        <div className="w-24 h-24 rounded-full bg-red-500" />
+        <p>Temperature</p>
+        <h1 className="text-3xl font-extrabold">98.6°F</h1>
+        <p>Normal</p>
+      </div>
+      <div className="col-span-1 bg-red-700 aspect-square p-4 rounded-xl">
+        <div className="w-24 h-24 rounded-full bg-red-500" />
+        <p>Heart Rate</p>
+        <h1 className="text-3xl font-extrabold">78 bpm</h1>
+        <p>Lower than Average</p>
+      </div>
     </div>
-  </>
+  </div>
 )
 
 const DiagnosticList = () => (
-  <div className="bg-red-400 mt-8">
+  <div className="bg-red-400 mt-8 p-5 rounded-2xl">
     <h1 className="text-2xl font-extrabold">Diagnostic List</h1>
 
     <div className="mt-10 p-4 bg-red-200">
-      <div className="bg-red-700 rounded-full mb-2.5">
+      <div className="bg-red-700 rounded-3xl p-4 mb-2.5">
         item/diagnosis description status
       </div>
       <div className="bg-red-100 max-h-[350px] overflow-y-scroll">
@@ -107,8 +110,18 @@ const DiagnosticList = () => (
   </div>
 )
 
+const ProfileDetail = () => (
+  <div className="bg-red-300 flex mt-8">
+    <div className="h-[2.625rem] w-[2.625rem] bg-red-900 rounded-full mr-4" />
+    <div>
+      <p>Profile Detail</p>
+      <p>Lorem Ipsum</p>
+    </div>
+  </div>
+)
+
 const PatientInfo = () => (
-  <>
+  <div className="bg-red-400 rounded-2xl px-5 py-8">
     <div className="flex flex-col items-center">
       <div className="bg-red-800 w-[12.5rem] h-[12.5rem] rounded-full" />
       <h1 className="text-2xl font-extrabold mt-6">Jessica Taylor</h1>
@@ -125,13 +138,13 @@ const PatientInfo = () => (
     <div className="w-[12.5rem] mt-10 mx-auto p-5 rounded-full text-center bg-active-1">
       Show All Information
     </div>
-  </>
+  </div>
 )
 
 const LabResults = () => (
-  <div className="bg-red-900 mt-8 p-5 ">
+  <div className="bg-red-900 mt-8 p-5 rounded-2xl">
     <h1 className="text-2xl font-extrabold mb-4">Lab Results</h1>
-    <div className="max-h-[350px] overflow-y-scroll">
+    <div className="max-h-[385px] overflow-y-scroll">
       {Array.from(Array(20)).map((i) => (
         <div className="py-2.5 px-4 bg-red-700 flex items-center justify-between">
           <p>Blood Tests</p>
@@ -147,20 +160,20 @@ const Home = () => {
     <div
       className="
       grid grid-cols-12 gap-8 bg-red-200 m-[1.125rem_auto]
-      max-w-[1600px]  
+      max-w-[1600px] 
     ">
       <NavBar />
 
-      <div className="col-span-3 bg-red-400 p-5">
+      <div className="col-span-3 bg-red-100 p-5 rounded-2xl">
         <Patients />
       </div>
 
-      <div className="col-span-6 bg-red-500 p-5">
+      <div className="col-span-6 bg-red-100 p-5">
         <DiagnosisHistory />
         <DiagnosticList />
       </div>
 
-      <div className="col-span-3 bg-red-300 p-5">
+      <div className="col-span-3 bg-red-100 p-5">
         <PatientInfo />
         <LabResults />
       </div>

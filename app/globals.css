@@ -45,6 +45,10 @@
   background: var(--activestate_bg_1);
 }
 
+.patient-card:hover {
+  background: var(--activestate_bg_2);
+}
+
 .border-color-1 {
   border-color: var(--color-ededed);
 }
