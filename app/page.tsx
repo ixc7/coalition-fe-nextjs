@@ -35,20 +35,54 @@ const NavBar = () => (
   </div>
 )
 
+const ProfileDetail = () => (
+  <div className="bg-red-300 flex mt-8">
+    <div className="h-[2.625rem] w-[2.625rem] bg-red-900 rounded-full mr-4" />
+    <div>
+      <p>Profile Detail</p>
+      <p>Lorem Ipsum</p>
+    </div>
+  </div>
+)
+
 const Home = () => {
   return (
-    <div className="grid grid-cols-12 gap-8 bg-red-200 m-[1.125rem]">
+    <div
+      className="
+      grid grid-cols-12 gap-8 bg-red-200 m-[1.125rem_auto]
+      max-w-[1600px]  
+    ">
       <NavBar />
       <div className="col-span-3 bg-red-400 p-5">
-        <h1 className="text-2xl font-extrabold">Patients</h1>
+        <div className="flex bg-red-100 items-center justify-between">
+          <h1 className="text-2xl font-extrabold">Patients</h1>
+          <div className="h-[1.125rem] w-[1.125rem] bg-red-800" />
+        </div>
         <div className="bg-red-600 mt-10">profiles</div>
       </div>
+
       <div className="col-span-6 bg-red-500 p-5">
         <h1 className="text-2xl font-extrabold">Diagnosis History</h1>
         <div className="bg-red-600 mt-10">Blood Pressure</div>
       </div>
+
       <div className="col-span-3 bg-red-300 p-5">
-        <h1 className="text-2xl font-extrabold">Jessica Taylor</h1>
+        <div className="flex flex-col items-center">
+          <div className="bg-red-800 w-[12.5rem] h-[12.5rem] rounded-full" />
+          <h1 className="text-2xl font-extrabold mt-6">Jessica Taylor</h1>
+        </div>
+
+        <div className="bg-red-200">
+          <ProfileDetail />
+          <ProfileDetail />
+          <ProfileDetail />
+          <ProfileDetail />
+          <ProfileDetail />
+        </div>
+
+        <div className="w-[12.5rem] mt-10 mx-auto p-5 rounded-full text-center bg-active-1">
+          Show All Information
+        </div>
       </div>
     </div>
   )
