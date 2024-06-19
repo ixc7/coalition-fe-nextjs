@@ -6,7 +6,7 @@ const ProfileDetail = ({ className, children }) => (
 )
 
 export const PatientInfo = () => (
-  <div className="bg-white rounded-2xl px-5 py-8">
+  <div className="bg-white rounded-2xl px-5 py-8 shadow-sm">
     <div className="flex flex-col items-center">
       <div
         className="w-[12.5rem] h-[12.5rem] rounded-full"

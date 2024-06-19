@@ -17,7 +17,7 @@ const listItems = [
 ]
 
 export const DiagnosticList = () => (
-  <div className="bg-white mt-8 p-5 rounded-2xl">
+  <div className="bg-white mt-8 p-5 rounded-2xl shadow-sm">
     <h1 className="text-2xl font-extrabold">Diagnostic List</h1>
 
     <div className="mt-10">

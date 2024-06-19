@@ -14,7 +14,7 @@ const Home = () => {
     ">
       <NavBar />
 
-      <div className="col-span-3 bg-white p-5 rounded-2xl">
+      <div className="col-span-3 bg-white p-5 rounded-2xl shadow-sm">
         <Patients />
       </div>
 

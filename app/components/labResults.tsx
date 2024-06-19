@@ -7,7 +7,7 @@ const items = [
 ]
 
 export const LabResults = () => (
-  <div className="bg-white mt-8 p-5 rounded-2xl">
+  <div className="bg-white mt-8 p-5 rounded-2xl shadow-sm">
     <h1 className="text-2xl font-extrabold mb-4">Lab Results</h1>
     <div className="relative max-h-[300px] overflow-y-scroll">
       {items.map((i) => (

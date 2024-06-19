@@ -80,7 +80,7 @@ export const Patients = () => (
           />
           <div>
             <p className="font-bold">{name}</p>
-            <p>{info}</p>
+            <p className="text-secondary">{info}</p>
           </div>
           <div className="absolute right-0 w-[1.125rem] h-1 more-horizontal-icon" />
         </div>

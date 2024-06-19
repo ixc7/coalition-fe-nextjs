@@ -1,6 +1,7 @@
-const NavButton = ({ className, children }) => (
-  <div className="py-3 px-4 rounded-full flex gap-2 items-center body-emphasized bg-active-1">
-    <div className={`aspect-square w-5 ${className}`} />
+const NavButton = ({ icon, className, children }) => (
+  <div
+    className={`py-3 px-4 rounded-full flex gap-2 items-center body-emphasized ${className}`}>
+    <div className={`aspect-square w-5 ${icon}`} />
     <p className="font-bold">{children}</p>
   </div>
 )
@@ -10,17 +11,21 @@ export const NavBar = () => (
     className="
     col-span-full bg-white px-8 py-4 
     grid grid-cols-subgrid gap-8
-    rounded-[4.375rem]
+    rounded-[4.375rem] shadow-sm
   ">
     <div className="col-span-3">
       <div className="h-12 test-logo"></div>
     </div>
     <div className="col-span-6 flex justify-around gap-2 px-5">
-      <NavButton className="home-icon">Overview</NavButton>
-      <NavButton className="patients-icon">Patients</NavButton>
-      <NavButton className="calendar-icon">Schedule</NavButton>
-      <NavButton className="message-icon">Message</NavButton>
-      <NavButton className="credit-card-icon">Transactions</NavButton>
+      <NavButton icon="home-icon">Overview</NavButton>
+      <NavButton
+        icon="patients-icon"
+        className="bg-active-1">
+        Patients
+      </NavButton>
+      <NavButton icon="calendar-icon">Schedule</NavButton>
+      <NavButton icon="message-icon">Message</NavButton>
+      <NavButton icon="credit-card-icon">Transactions</NavButton>
     </div>
 
     <div className="col-span-3 flex items-center justify-end">

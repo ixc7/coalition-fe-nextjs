@@ -1,5 +1,5 @@
 export const DiagnosisHistory = () => (
-  <div className="bg-white p-5 rounded-2xl">
+  <div className="bg-white p-5 rounded-2xl shadow-sm">
     <h1 className="text-2xl font-extrabold">Diagnosis History</h1>
 
     <div className="mt-10 grid grid-cols-3 gap-5">
