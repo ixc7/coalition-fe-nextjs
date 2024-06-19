@@ -8,14 +8,14 @@ const Button = () => (
 const NavBar = () => (
   <div
     className="
-    col-span-full bg-red-700 px-8 py-4 
+    col-span-full bg-white px-8 py-4 
     grid grid-cols-subgrid gap-8
-    shadow-xl rounded-[4.375rem]
+    rounded-[4.375rem]
   ">
-    <div className="col-span-3 bg-red-100">
-      <div className="h-12 bg-red-300">left logo</div>
+    <div className="col-span-3">
+      <div className="h-12">left logo</div>
     </div>
-    <div className="col-span-6 flex justify-around gap-2 bg-red-200 px-5">
+    <div className="col-span-6 flex justify-around gap-2 px-5">
       <Button />
       <Button />
       <Button />
@@ -23,37 +23,37 @@ const NavBar = () => (
       <Button />
     </div>
 
-    <div className="col-span-3 bg-red-100 flex items-center justify-end">
-      <div className="h-12 w-12 bg-red-300 rounded-full mr-2"></div>
-      <div className="mr-3 pr-3 bg-red-400 border-r border-color-1">
+    <div className="col-span-3 flex items-center justify-end">
+      <div className="h-12 w-12 bg-active-1 rounded-full mr-2"></div>
+      <div className="mr-3 pr-3 border-r border-color-1">
         <p>Dr. Jose Simmons</p>
         <p>General Practitioner</p>
       </div>
-      <div className="h-5 bg-red-500 mr-2">X</div>
-      <div className="bg-red-600">.</div>
+      <div className="h-5 mr-2">X</div>
+      <div>.</div>
     </div>
   </div>
 )
 
 const PatientCard = () => (
-  <div className="relative flex items-center mb-8 bg-red-600 patient-card">
-    <div className="bg-red-200 w-12 h-12 rounded-full mr-3" />
-    <div className="bg-red-300">
+  <div className="relative flex items-center py-4 px-5 patient-card">
+    <div className="bg-active-1 w-12 h-12 rounded-full mr-3" />
+    <div>
       <p>Firstname Lastname</p>
       <p>Gender, Age</p>
     </div>
-    <div className="absolute right-0 w-[1.125rem] bg-red-800">...</div>
+    <div className="absolute right-0 w-[1.125rem]">...</div>
   </div>
 )
 
 const Patients = () => (
   <>
-    <div className="flex bg-red-100 items-center justify-between">
+    <div className="flex items-center justify-between">
       <h1 className="text-2xl font-extrabold">Patients</h1>
-      <div className="h-[1.125rem] w-[1.125rem] bg-red-800" />
+      <div className="h-[1.125rem] w-[1.125rem]" />
     </div>
 
-    <div className="bg-red-900 mt-10 max-h-[1054px] overflow-y-scroll">
+    <div className="mt-10 max-h-[1054px] overflow-y-scroll">
       {Array.from(Array(25)).map((i) => (
         <PatientCard />
       ))}
@@ -62,27 +62,27 @@ const Patients = () => (
 )
 
 const DiagnosisHistory = () => (
-  <div className="bg-red-400 p-5 rounded-2xl">
+  <div className="bg-white p-5 rounded-2xl">
     <h1 className="text-2xl font-extrabold">Diagnosis History</h1>
 
     <div className="mt-10 grid grid-cols-3 gap-5">
-      <div className="bg-red-600 col-span-full aspect-video p-4 rounded-xl">
+      <div className="bg-active-2 col-span-full aspect-video p-4 rounded-xl">
         Blood Pressure
       </div>
-      <div className="col-span-1 bg-red-700 aspect-square p-4 rounded-xl">
-        <div className="w-24 h-24 rounded-full bg-red-500" />
+      <div className="col-span-1 bg-active-2 aspect-square p-4 rounded-xl">
+        <div className="w-24 h-24 rounded-full bg-active-1" />
         <p>Respiratory Rate</p>
         <h1 className="text-3xl font-extrabold">20 bpm</h1>
         <p>Normal</p>
       </div>
-      <div className="col-span-1 bg-red-700 aspect-square p-4 rounded-xl">
-        <div className="w-24 h-24 rounded-full bg-red-500" />
+      <div className="col-span-1 bg-active-2 aspect-square p-4 rounded-xl">
+        <div className="w-24 h-24 rounded-full bg-active-1" />
         <p>Temperature</p>
         <h1 className="text-3xl font-extrabold">98.6°F</h1>
         <p>Normal</p>
       </div>
-      <div className="col-span-1 bg-red-700 aspect-square p-4 rounded-xl">
-        <div className="w-24 h-24 rounded-full bg-red-500" />
+      <div className="col-span-1 bg-active-2 aspect-square p-4 rounded-xl">
+        <div className="w-24 h-24 rounded-full bg-active-1" />
         <p>Heart Rate</p>
         <h1 className="text-3xl font-extrabold">78 bpm</h1>
         <p>Lower than Average</p>
@@ -92,16 +92,16 @@ const DiagnosisHistory = () => (
 )
 
 const DiagnosticList = () => (
-  <div className="bg-red-400 mt-8 p-5 rounded-2xl">
+  <div className="bg-white mt-8 p-5 rounded-2xl">
     <h1 className="text-2xl font-extrabold">Diagnostic List</h1>
 
-    <div className="mt-10 p-4 bg-red-200">
-      <div className="bg-red-700 rounded-3xl p-4 mb-2.5">
+    <div className="mt-10 p-4">
+      <div className="bg-active-1 rounded-3xl p-4 mb-2.5">
         item/diagnosis description status
       </div>
-      <div className="bg-red-100 max-h-[350px] overflow-y-scroll">
+      <div className="max-h-[350px] overflow-y-scroll">
         {Array.from(Array(20)).map((i) => (
-          <div className="mb-2.5 py-5 bg-red-500">
+          <div className="mb-2.5 py-5">
             Hypertension Chronic high blood pressure Under Observation
           </div>
         ))}
@@ -111,8 +111,8 @@ const DiagnosticList = () => (
 )
 
 const ProfileDetail = () => (
-  <div className="bg-red-300 flex mt-8">
-    <div className="h-[2.625rem] w-[2.625rem] bg-red-900 rounded-full mr-4" />
+  <div className="flex mt-8">
+    <div className="h-[2.625rem] w-[2.625rem] bg-active-1 rounded-full mr-4" />
     <div>
       <p>Profile Detail</p>
       <p>Lorem Ipsum</p>
@@ -121,13 +121,13 @@ const ProfileDetail = () => (
 )
 
 const PatientInfo = () => (
-  <div className="bg-red-400 rounded-2xl px-5 py-8">
+  <div className="bg-white rounded-2xl px-5 py-8">
     <div className="flex flex-col items-center">
-      <div className="bg-red-800 w-[12.5rem] h-[12.5rem] rounded-full" />
+      <div className="bg-active-1 w-[12.5rem] h-[12.5rem] rounded-full" />
       <h1 className="text-2xl font-extrabold mt-6">Jessica Taylor</h1>
     </div>
 
-    <div className="bg-red-200">
+    <div>
       <ProfileDetail />
       <ProfileDetail />
       <ProfileDetail />
@@ -142,13 +142,13 @@ const PatientInfo = () => (
 )
 
 const LabResults = () => (
-  <div className="bg-red-900 mt-8 p-5 rounded-2xl">
+  <div className="bg-white mt-8 p-5 rounded-2xl">
     <h1 className="text-2xl font-extrabold mb-4">Lab Results</h1>
     <div className="max-h-[385px] overflow-y-scroll">
       {Array.from(Array(20)).map((i) => (
-        <div className="py-2.5 px-4 bg-red-700 flex items-center justify-between">
+        <div className="py-2.5 px-4 flex items-center justify-between">
           <p>Blood Tests</p>
-          <div className="h-5 w-5 bg-red-900" />
+          <div className="h-5 w-5 bg-active-1" />
         </div>
       ))}
     </div>
@@ -159,21 +159,21 @@ const Home = () => {
   return (
     <div
       className="
-      grid grid-cols-12 gap-8 bg-red-200 m-[1.125rem_auto]
+      grid grid-cols-12 gap-8 m-[1.125rem_auto]
       max-w-[1600px] 
     ">
       <NavBar />
 
-      <div className="col-span-3 bg-red-100 p-5 rounded-2xl">
+      <div className="col-span-3 bg-white p-5 rounded-2xl">
         <Patients />
       </div>
 
-      <div className="col-span-6 bg-red-100 p-5">
+      <div className="col-span-6 p-5">
         <DiagnosisHistory />
         <DiagnosticList />
       </div>
 
-      <div className="col-span-3 bg-red-100 p-5">
+      <div className="col-span-3 p-5">
         <PatientInfo />
         <LabResults />
       </div>

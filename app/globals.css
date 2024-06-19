@@ -4,7 +4,8 @@
 
 :root {
   /* Colors: */
-  --bg-body: #f6f7f8;
+  /* --bg-body: #f6f7f8; */
+  --bg-body: #dddddd;
   --text-primary: #072635;
   --color-705aaa: #705aaa;
   --color-cbc8d4: #cbc8d4;
@@ -43,6 +44,10 @@
 
 .bg-active-1 {
   background: var(--activestate_bg_1);
+}
+
+.bg-active-2 {
+  background: var(--activestate_bg_2);
 }
 
 .patient-card:hover {
