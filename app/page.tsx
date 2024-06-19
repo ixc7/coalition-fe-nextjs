@@ -80,23 +80,30 @@ const Home = () => {
 
       <div className="col-span-6 bg-red-500 p-5">
         <h1 className="text-2xl font-extrabold">Diagnosis History</h1>
-        
-        <div className="bg-red-600 mt-10 grid grid-cols-3 gap-5">
-          <div className="bg-red-200 col-span-full">
-            Blood Pressure
-          </div>
-          <div className="col-span-1 bg-red-700">
-            Respiratory Rate
-          </div>
-          <div className="col-span-1 bg-red-700">
-            Temperature
-          </div>
-          <div className="col-span-1 bg-red-700">
-            Heart Rate
+
+        <div className="bg-red-800 mt-10 grid grid-cols-3 gap-5">
+          <div className="bg-red-600 col-span-full">Blood Pressure</div>
+          <div className="col-span-1 bg-red-700">Respiratory Rate</div>
+          <div className="col-span-1 bg-red-700">Temperature</div>
+          <div className="col-span-1 bg-red-700">Heart Rate</div>
+        </div>
+
+        <div className="bg-red-400 mt-8">
+          <h1 className="text-2xl font-extrabold">Diagnostic List</h1>
+
+          <div className="mt-10 p-4 bg-red-200">
+            <div className="bg-red-700 rounded-full mb-2.5">
+              item/diagnosis description status
+            </div>
+            <div className="bg-red-100 max-h-[350px] overflow-y-scroll">
+              {Array.from(Array(20)).map((i) => (
+                <div className="mb-2.5 py-5 bg-red-500">
+                  Hypertension Chronic high blood pressure Under Observation
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-        
-        <div className="bg-red-400 mt-8 max-h-[350px]">Diagnostic List</div>
       </div>
 
       <div className="col-span-3 bg-red-300 p-5">
@@ -117,9 +124,7 @@ const Home = () => {
           Show All Information
         </div>
 
-        <div className="bg-red-900 mt-8 max-h-[300px]">
-          Lab Results
-        </div>
+        <div className="bg-red-900 mt-8 max-h-[300px]">Lab Results</div>
       </div>
     </div>
   )
