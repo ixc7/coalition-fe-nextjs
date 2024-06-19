@@ -95,11 +95,11 @@ const DiagnosticList = () => (
   <div className="bg-white mt-8 p-5 rounded-2xl">
     <h1 className="text-2xl font-extrabold">Diagnostic List</h1>
 
-    <div className="mt-10 p-4">
+    <div className="mt-10">
       <div className="bg-active-1 rounded-3xl p-4 mb-2.5">
         item/diagnosis description status
       </div>
-      <div className="max-h-[350px] overflow-y-scroll">
+      <div className="max-h-[350px] px-4 overflow-y-scroll">
         {Array.from(Array(20)).map((i) => (
           <div className="mb-2.5 py-5">
             Hypertension Chronic high blood pressure Under Observation
@@ -111,7 +111,7 @@ const DiagnosticList = () => (
 )
 
 const ProfileDetail = () => (
-  <div className="flex mt-8">
+  <div className="flex mt-8 px-5">
     <div className="h-[2.625rem] w-[2.625rem] bg-active-1 rounded-full mr-4" />
     <div>
       <p>Profile Detail</p>
@@ -135,7 +135,7 @@ const PatientInfo = () => (
       <ProfileDetail />
     </div>
 
-    <div className="w-[12.5rem] mt-10 mx-auto p-5 rounded-full text-center bg-active-1">
+    <div className="w-[12.5rem] mt-10 mx-auto py-2.5 rounded-full text-center bg-active-1">
       Show All Information
     </div>
   </div>
@@ -144,7 +144,7 @@ const PatientInfo = () => (
 const LabResults = () => (
   <div className="bg-white mt-8 p-5 rounded-2xl">
     <h1 className="text-2xl font-extrabold mb-4">Lab Results</h1>
-    <div className="max-h-[385px] overflow-y-scroll">
+    <div className="relative max-h-[420px] overflow-y-scroll">
       {Array.from(Array(20)).map((i) => (
         <div className="py-2.5 px-4 flex items-center justify-between">
           <p>Blood Tests</p>
@@ -168,12 +168,14 @@ const Home = () => {
         <Patients />
       </div>
 
-      <div className="col-span-6 p-5">
+      {/* p-5 */}
+      <div className="col-span-6">
         <DiagnosisHistory />
         <DiagnosticList />
       </div>
 
-      <div className="col-span-3 p-5">
+      {/* p-5 */}
+      <div className="col-span-3">
         <PatientInfo />
         <LabResults />
       </div>
