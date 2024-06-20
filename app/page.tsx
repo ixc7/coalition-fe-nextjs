@@ -27,9 +27,9 @@ const Home = async () => {
     return (
       <div
         className="
-      grid grid-cols-12 gap-8 m-[1.125rem_auto]
-      max-w-[1600px] 
-    ">
+          grid grid-cols-12 gap-8 m-[1.125rem_auto]
+          max-w-[1600px]
+        ">
         <NavBar />
 
         <div className="col-span-3 bg-white pb-4 rounded-2xl shadow-sm">
@@ -49,7 +49,7 @@ const Home = async () => {
     )
   } catch (error) {
     return (
-      <div className=" p-10">
+      <div className="p-10">
         <h1 className="text-3xl mb-10">Error fetching data from API!</h1>
         <pre>{JSON.stringify(error, null, 2)}</pre>
       </div>

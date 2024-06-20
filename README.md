@@ -5,6 +5,8 @@
 3. Start the development server with `npm run dev`
 4. To test a production build, run `npm run build` and `npm run start`
 
+This project uses *[TailwindCSS](https://tailwindcss.com/docs)* for utility classes and functions.
+
 ---
 
 #### From the original README.md:

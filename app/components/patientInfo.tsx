@@ -51,7 +51,7 @@ export const PatientInfo = ({ apiData }) => {
         </ProfileDetail>
       </div>
 
-      <div className="w-[12.5rem] mt-10 mx-auto py-2.5 rounded-full text-center font-bold bg-active-1">
+      <div className="w-[12.5rem] mt-10 mx-auto py-2.5 rounded-full text-center font-bold bg-active-1 button">
         Show All Information
       </div>
     </div>

@@ -20,7 +20,10 @@ export const DiagnosisHistory = ({ apiData }) => {
               <h1 className="font-bold text-[1.125rem] leading-6">
                 Blood Pressure
               </h1>
-              <ul>Last 6 months</ul>
+              <div className="flex gap-4 items-center">
+                <p>Last 6 months</p>
+                <div className="aspect-square w-2.5 carat-down-icon" />
+              </div>
             </div>
 
             <LineChart apiData={apiData} />
@@ -34,7 +37,15 @@ export const DiagnosisHistory = ({ apiData }) => {
             <p className="text-[1.375rem] font-bold mb-2 leading-8">
               {systolic.value}
             </p>
-            <p>{systolic.levels}</p>
+            <div className="flex gap-2 items-center">
+              <div
+                className={`
+                w-2.5 aspect-square
+                ${systolic.levels.toLowerCase().includes("lower") ? "arrow-down-icon" : "arrow-up-icon"}
+              `}
+              />
+              <p>{systolic.levels}</p>
+            </div>
 
             <hr className="my-[1.125rem]" />
 
@@ -46,8 +57,15 @@ export const DiagnosisHistory = ({ apiData }) => {
             <p className="text-[1.375rem] font-bold mb-2 leading-8">
               {diastolic.value}
             </p>
-
-            <p>{diastolic.levels}</p>
+            <div className="flex gap-2 items-center">
+              <div
+                className={`
+                w-2.5 aspect-square
+                ${diastolic.levels.toLowerCase().includes("lower") ? "arrow-down-icon" : "arrow-up-icon"}
+              `}
+              />
+              <p>{diastolic.levels}</p>
+            </div>
           </div>
         </div>
 
@@ -86,7 +104,16 @@ export const DiagnosisHistory = ({ apiData }) => {
           />
           <p className="mt-4 text-base">Heart Rate</p>
           <h1 className="text-3xl font-extrabold">{heart_rate.value} bpm</h1>
-          <p className="mt-4">{heart_rate.levels}</p>
+
+          <div className="flex items-center gap-2 mt-4">
+            <div
+              className={`
+              w-2.5 aspect-square
+              ${heart_rate.levels.toLowerCase().includes("lower") ? "arrow-down-icon" : "arrow-up-icon"}
+            `}
+            />
+            <p>{heart_rate.levels}</p>
+          </div>
         </div>
       </div>
     </div>

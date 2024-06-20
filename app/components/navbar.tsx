@@ -1,6 +1,6 @@
 const NavButton = ({ icon, className, children }) => (
   <div
-    className={`py-3 px-4 rounded-full flex gap-2 items-center body-emphasized ${className}`}>
+    className={`py-3 px-4 rounded-full flex gap-2 items-center button ${className}`}>
     <div className={`aspect-square w-5 ${icon}`} />
     <p className="font-bold">{children}</p>
   </div>

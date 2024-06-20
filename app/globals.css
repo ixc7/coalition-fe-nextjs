@@ -23,12 +23,14 @@ body {
 
 /* Colors */
 
-.text-secondary {
-  color: var(--text-secondary);
+.button:hover,
+.patient-card:hover {
+  @apply cursor-pointer transition-all ease-linear duration-150;
+  background: var(--activestate-bg-2);
 }
 
-.patient-card:hover {
-  background: var(--activestate-bg-2);
+.text-secondary {
+  color: var(--text-secondary);
 }
 
 .bg-active-1 {
@@ -150,4 +152,19 @@ body {
 .search-icon {
   @apply svg-icon;
   background-image: url("../public/search_FILL0_wght300_GRAD0_opsz24.svg");
+}
+
+.carat-down-icon {
+  @apply svg-icon;
+  background-image: url("../public/expand_more_FILL0_wght300_GRAD0_opsz24.svg");
+}
+
+.arrow-down-icon {
+  @apply svg-icon;
+  background-image: url("../public/ArrowDown.svg");
+}
+
+.arrow-up-icon {
+  @apply svg-icon;
+  background-image: url("../public/ArrowUp.svg");
 }
