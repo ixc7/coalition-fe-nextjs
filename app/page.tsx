@@ -13,7 +13,7 @@ const Home = () => (
     ">
     <NavBar />
 
-    <div className="col-span-3 bg-white p-5 rounded-2xl shadow-sm">
+    <div className="col-span-3 bg-white pb-4 rounded-2xl shadow-sm">
       <Patients />
     </div>
 

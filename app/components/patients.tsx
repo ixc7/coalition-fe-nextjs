@@ -2,7 +2,7 @@ import apiData from "../fullData.json"
 
 export const Patients = () => (
   <>
-    <div className="flex items-center justify-between">
+    <div className="flex items-center justify-between p-5">
       <h1 className="text-2xl font-extrabold">Patients</h1>
       <div className="h-[1.125rem] w-[1.125rem]" />
     </div>
@@ -23,7 +23,7 @@ export const Patients = () => (
               {gender}, {age}
             </p>
           </div>
-          <div className="absolute right-0 w-[1.125rem] h-1 more-horizontal-icon" />
+          <div className="absolute right-5 w-[1.125rem] h-1 more-horizontal-icon" />
         </div>
       ))}
     </div>
