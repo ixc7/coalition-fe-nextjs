@@ -40,6 +40,11 @@
   --text-transform-titlecase: @apply capitalize;
 }
 
+body {
+  color: rgb(var(--text-primary));
+  background: var(--bg-body);
+}
+
 /* Color Classes */
 
 .text-secondary {
@@ -63,6 +68,7 @@
 }
 
 /* Adobe XD Classes */
+
 .card-title {
   font-style: var(--font-style-normal);
   font-weight: var(--font-weight-800);
@@ -105,11 +111,7 @@
   letter-spacing: var(--character-spacing-0);
 }
 
-/* Custom Classes */
-body {
-  color: rgb(var(--text-primary));
-  background: var(--bg-body);
-}
+/* SVG Classes */
 
 .svg-icon {
   background-position: center;

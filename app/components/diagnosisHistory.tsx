@@ -1,9 +1,8 @@
 import { LineChart } from "./lineChart.tsx"
 import apiData from "../data.json"
 
-const { diagnosis_history } = apiData
 const { heart_rate, respiratory_rate, temperature, blood_pressure } =
-  diagnosis_history[0]
+  apiData.diagnosis_history[0]
 const { systolic, diastolic } = blood_pressure
 
 export const DiagnosisHistory = () => (
@@ -56,6 +55,7 @@ export const DiagnosisHistory = () => (
         </h1>
         <p>{respiratory_rate.levels}</p>
       </div>
+
       <div className="col-span-1 aspect-square p-4 rounded-xl bg-[#FFE6E9]">
         <div
           className="w-24 h-24 rounded-full bg-cover"
@@ -67,6 +67,7 @@ export const DiagnosisHistory = () => (
         <h1 className="text-3xl font-extrabold">{temperature.value}°F</h1>
         <p>{temperature.levels}</p>
       </div>
+
       <div className="col-span-1 aspect-square p-4 rounded-xl bg-[#FFE6F1]">
         <div
           className="w-24 h-24 rounded-full bg-cover"
