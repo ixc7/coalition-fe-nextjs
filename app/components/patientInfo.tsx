@@ -32,23 +32,23 @@ export const PatientInfo = () => (
     <div>
       <ProfileDetail className="birth-icon">
         <p>Date Of Birth</p>
-        <p className="font-bold">{date_of_birth}</p>
+        <p className="font-bold mt-1">{date_of_birth}</p>
       </ProfileDetail>
       <ProfileDetail className="female-icon">
         <p>Gender</p>
-        <p className="font-bold">{gender}</p>
+        <p className="font-bold mt-1">{gender}</p>
       </ProfileDetail>
       <ProfileDetail className="phone-icon">
         <p>Contact Info</p>
-        <p className="font-bold">{phone_number}</p>
+        <p className="font-bold mt-1">{phone_number}</p>
       </ProfileDetail>
       <ProfileDetail className="phone-icon">
         <p>Emergency Contacts</p>
-        <p className="font-bold">{emergency_contact}</p>
+        <p className="font-bold mt-1">{emergency_contact}</p>
       </ProfileDetail>
       <ProfileDetail className="insurance-icon">
         <p>Insurance Provider</p>
-        <p className="font-bold">{insurance_type}</p>
+        <p className="font-bold mt-1">{insurance_type}</p>
       </ProfileDetail>
     </div>
 

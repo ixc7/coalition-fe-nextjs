@@ -8,22 +8,25 @@
   --text-secondary: #707070;
   --activestate_bg_2: #d8fcf7;
   --activestate_bg_1: #01f0d0;
-  --color-ededed: #ededed;
   --font-size-14: 0.875rem;
-  /* --line-spacing-19: 1.188rem; */
+  --line-spacing-19: 1.188rem;
 }
 
 body {
   color: rgb(var(--text-primary));
   background: var(--bg-body);
   font-size: var(--font-size-14);
-  /* line-height: var(--line-spacing-19); */
+  line-height: var(--line-spacing-19);
 }
 
 /* Color Classes */
 
 .text-secondary {
   color: var(--text-secondary);
+}
+
+.patient-card:hover {
+  background: var(--activestate_bg_2);
 }
 
 .bg-active-1 {
@@ -34,12 +37,32 @@ body {
   background: var(--activestate_bg_2);
 }
 
-.patient-card:hover {
-  background: var(--activestate_bg_2);
+.border-color-1 {
+  border-color: #ededed;
 }
 
-.border-color-1 {
-  border-color: var(--color-ededed);
+.bg-chart {
+  background-color: #f4f0fe;
+}
+
+.bg-systolic {
+  background-color: #e66fd2;
+}
+
+.bg-diastolic {
+  background-color: #8c6fe6;
+}
+
+.bg-respiratory {
+  background-color: #e0f3fa;
+}
+
+.bg-temperature {
+  background-color: #ffe6e9;
+}
+
+.bg-heart-rate {
+  background-color: #ffe6f1;
 }
 
 /* SVG Classes */
@@ -120,4 +143,9 @@ body {
 .insurance-icon {
   @apply svg-icon;
   background-image: url("../public/InsuranceIcon.svg");
+}
+
+.search-icon {
+  @apply svg-icon;
+  background-image: url("../public/search_FILL0_wght300_GRAD0_opsz24.svg");
 }

@@ -4,13 +4,17 @@ export const Patients = () => (
   <>
     <div className="flex items-center justify-between p-5">
       <h1 className="text-2xl font-extrabold">Patients</h1>
-      <div className="h-[1.125rem] w-[1.125rem]" />
+      <div className="h-[1.125rem] w-[1.125rem] search-icon" />
     </div>
 
     <div className="mt-10 max-h-[1000px] overflow-y-scroll">
-      {apiData.map(({ name, gender, age, profile_picture }) => (
+      {apiData.map(({ name, gender, age, profile_picture }, k) => (
         <div
-          className={`relative flex items-center py-4 px-5 ${name === "Jessica Taylor" ? "bg-active-2" : "patient-card"}`}>
+          key={k}
+          className={`
+            relative flex items-center py-4 px-5 
+            ${name === "Jessica Taylor" ? "bg-active-2" : "patient-card"}
+          `}>
           <div
             className="w-12 h-12 rounded-full mr-3"
             style={{
@@ -20,7 +24,7 @@ export const Patients = () => (
           />
           <div>
             <p className="font-bold">{name}</p>
-            <p className="text-secondary">
+            <p className="text-secondary mt-1">
               {gender}, {age}
             </p>
           </div>
