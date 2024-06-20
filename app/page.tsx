@@ -11,7 +11,9 @@ const Home = async () => {
       "https://fedskillstest.coalitiontechnologies.workers.dev",
       {
         headers: {
-          Authorization: `Basic ${btoa("coalition:skills-test")}`,
+          Authorization: `Basic ${btoa(
+            process.env.USERNAME + ":" + process.env.PASSWORD,
+          )}`,
         },
       },
     )
