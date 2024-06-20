@@ -1,5 +1,5 @@
 export const LabResults = ({ apiData }) => {
-  const { lab_results } = apiData.filter((i) => i.name === "Jessica Taylor")[0]
+  const { lab_results } = apiData
   return (
     <div className="bg-white mt-8 p-5 rounded-2xl shadow-sm">
       <h1 className="text-2xl font-extrabold mb-4">Lab Results</h1>

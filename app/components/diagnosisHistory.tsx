@@ -2,9 +2,9 @@ import { LineChart } from "./lineChart.tsx"
 
 export const DiagnosisHistory = ({ apiData }) => {
   const { heart_rate, respiratory_rate, temperature, blood_pressure } =
-    apiData.filter((i) => i.name === "Jessica Taylor")[0].diagnosis_history[0]
-
+    apiData.diagnosis_history[0]
   const { systolic, diastolic } = blood_pressure
+
   return (
     <div className="bg-white p-5 rounded-2xl shadow-sm">
       <h1 className="text-2xl font-extrabold">Diagnosis History</h1>

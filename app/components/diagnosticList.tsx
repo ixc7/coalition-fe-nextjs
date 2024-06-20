@@ -1,7 +1,5 @@
 export const DiagnosticList = ({ apiData }) => {
-  const { diagnostic_list } = apiData.filter(
-    (i) => i.name === "Jessica Taylor",
-  )[0]
+  const { diagnostic_list } = apiData
   return (
     <div className="bg-white mt-8 p-5 rounded-2xl shadow-sm">
       <h1 className="text-2xl font-extrabold">Diagnostic List</h1>

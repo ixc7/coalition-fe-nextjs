@@ -14,7 +14,7 @@ export const PatientInfo = ({ apiData }) => {
     phone_number,
     emergency_contact,
     insurance_type,
-  } = apiData.filter((i) => i.name === "Jessica Taylor")[0]
+  } = apiData
   return (
     <div className="bg-white rounded-2xl px-5 py-8 shadow-sm">
       <div className="flex flex-col items-center">
