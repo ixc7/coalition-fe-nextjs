@@ -1,3 +1,15 @@
+## How To
+
+1. Install required dependencies with `npm install` or similar.
+2. Update `.env` USERNAME and PASSWORD credentials.
+3. Start the development server with `npm run dev`
+4. To test a production build, run `npm run build` and `npm run start`
+
+---
+
+#### From the original README.md:
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -17,8 +29,6 @@ bun dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
 ## Learn More
 

@@ -23,7 +23,7 @@ export const DiagnosisHistory = ({ apiData }) => {
               <ul>Last 6 months</ul>
             </div>
 
-            <LineChart />
+            <LineChart apiData={apiData} />
           </div>
 
           <div className="col-span-1">
