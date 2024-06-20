@@ -1,7 +1,10 @@
 import { LineChart } from "./lineChart.tsx"
+import apiData from "../data.json"
 
-// arrows are 10px w 5px h
-// chart circles are 14px w 14px h
+const { diagnosis_history } = apiData
+const { heart_rate, respiratory_rate, temperature, blood_pressure } =
+  diagnosis_history[0]
+const { systolic, diastolic } = blood_pressure
 
 export const DiagnosisHistory = () => (
   <div className="bg-white p-5 rounded-2xl shadow-sm">
@@ -25,8 +28,8 @@ export const DiagnosisHistory = () => (
             <div className="w-3.5 h-3.5 bg-[#E66FD2] rounded-full" />
             <h2 className="font-bold text-[0.875rem]">Systolic</h2>
           </div>
-          <p className="text-[1.375rem] font-bold mb-2">160</p>
-          <p className="text-[0.875rem]">Higher than Average</p>
+          <p className="text-[1.375rem] font-bold mb-2">{systolic.value}</p>
+          <p className="text-[0.875rem]">{systolic.levels}</p>
 
           <hr className="my-[1.125rem]" />
 
@@ -35,8 +38,8 @@ export const DiagnosisHistory = () => (
             <h2 className="font-bold text-[0.875rem]">Diastolic</h2>
           </div>
 
-          <p className="text-[1.375rem] font-bold mb-2">78</p>
-          <p className="text-[0.875rem]">Lower than Average</p>
+          <p className="text-[1.375rem] font-bold mb-2">{diastolic.value}</p>
+          <p className="text-[0.875rem]">{diastolic.levels}</p>
         </div>
       </div>
 
@@ -48,8 +51,10 @@ export const DiagnosisHistory = () => (
           }}
         />
         <p>Respiratory Rate</p>
-        <h1 className="text-3xl font-extrabold">20 bpm</h1>
-        <p>Normal</p>
+        <h1 className="text-3xl font-extrabold">
+          {respiratory_rate.value} bpm
+        </h1>
+        <p>{respiratory_rate.levels}</p>
       </div>
       <div className="col-span-1 aspect-square p-4 rounded-xl bg-[#FFE6E9]">
         <div
@@ -59,8 +64,8 @@ export const DiagnosisHistory = () => (
           }}
         />
         <p>Temperature</p>
-        <h1 className="text-3xl font-extrabold">98.6°F</h1>
-        <p>Normal</p>
+        <h1 className="text-3xl font-extrabold">{temperature.value}°F</h1>
+        <p>{temperature.levels}</p>
       </div>
       <div className="col-span-1 aspect-square p-4 rounded-xl bg-[#FFE6F1]">
         <div
@@ -70,8 +75,8 @@ export const DiagnosisHistory = () => (
           }}
         />
         <p>Heart Rate</p>
-        <h1 className="text-3xl font-extrabold">78 bpm</h1>
-        <p>Lower than Average</p>
+        <h1 className="text-3xl font-extrabold">{heart_rate.value} bpm</h1>
+        <p>{heart_rate.levels}</p>
       </div>
     </div>
   </div>

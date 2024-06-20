@@ -11,6 +11,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js"
+import apiData from "../data.json"
 
 ChartJS.register(
   CategoryScale,
@@ -21,6 +22,8 @@ ChartJS.register(
   Tooltip,
   Legend,
 )
+
+const { diagnosis_history } = apiData
 
 const options = {
   responsive: true,
@@ -38,36 +41,33 @@ const options = {
 }
 
 const data = {
-  labels: [
-    "Oct, 2023",
-    "Nov, 2023",
-    "Dec, 2023",
-    "Jan, 2024",
-    "Feb, 2024",
-    "Mar, 2024",
-  ],
-  // labels: ["a", "b", "c", "d", "e", "f"],
+  labels: diagnosis_history
+    .map(({ month, year }) => `${month}, ${year}`)
+    .toReversed()
+    .slice(-6),
   datasets: [
     {
       label: "Systolic",
-      data: [60, 70, 160, 150, 100, 140],
-      borderColor: "rgb(255, 99, 132)",
-      tension: 0.25,
+      data: diagnosis_history
+        .map((i) => i.blood_pressure.systolic.value)
+        .toReversed(),
+      borderColor: "#E66FD2",
+      tension: 0.35,
     },
     {
       label: "Diastolic",
-      data: [60, 80, 130, 120, 100, 110],
-      borderColor: "rgb(53, 162, 235)",
-      tension: 0.25,
+      data: diagnosis_history
+        .map((i) => i.blood_pressure.diastolic.value)
+        .toReversed(),
+      borderColor: "#8C6FE6",
+      tension: 0.35,
     },
   ],
 }
 
-export const LineChart = () => {
-  return (
-    <Line
-      options={options}
-      data={data}
-    />
-  )
-}
+export const LineChart = () => (
+  <Line
+    options={options}
+    data={data}
+  />
+)
