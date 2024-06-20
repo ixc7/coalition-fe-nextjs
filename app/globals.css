@@ -3,46 +3,21 @@
 @tailwind utilities;
 
 :root {
-  /* Colors: */
   --bg-body: #f6f7f8;
-  /* --bg-body: #dddddd; */
   --text-primary: #072635;
   --text-secondary: #707070;
-  --color-705aaa: #705aaa;
-  --color-cbc8d4: #cbc8d4;
   --activestate_bg_2: #d8fcf7;
   --activestate_bg_1: #01f0d0;
-  --color-0bd984: #0bd984;
-  --color-0c3d5d: #0c3d5d;
-  --color-084c77: #084c77;
-  --color-055a92: #055a92;
-  --color-006aac: #006aac;
-  --color-007bc7: #007bc7;
-  --color-f6f6f6: #f6f6f6;
   --color-ededed: #ededed;
-  --color-000000: #000000;
-  --color-878787: #878787;
-  --color-ffffff: #ffffff;
-  --color-ff6200: #ff6200;
-
-  /* Text */
-  --font-style-normal: @apply not-italic;
-  --font-weight-800: @apply font-extrabold;
-  --font-weight-normal: @apply font-normal;
-  --font-weight-bold: @apply font-bold;
-  --font-size-14: @apply text-sm;
-  --font-size-18: @apply text-lg;
-  --font-size-24: @apply text-2xl;
-  --character-spacing-0: @apply tracking-normal;
-  --line-spacing-19: 1.188rem;
-  --line-spacing-24: @apply leading-6;
-  --line-spacing-33: 2.063rem;
-  --text-transform-titlecase: @apply capitalize;
+  --font-size-14: 0.875rem;
+  /* --line-spacing-19: 1.188rem; */
 }
 
 body {
   color: rgb(var(--text-primary));
   background: var(--bg-body);
+  font-size: var(--font-size-14);
+  /* line-height: var(--line-spacing-19); */
 }
 
 /* Color Classes */
@@ -65,50 +40,6 @@ body {
 
 .border-color-1 {
   border-color: var(--color-ededed);
-}
-
-/* Adobe XD Classes */
-
-.card-title {
-  font-style: var(--font-style-normal);
-  font-weight: var(--font-weight-800);
-  font-size: var(--font-size-24);
-  line-height: var(--line-spacing-33);
-  letter-spacing: var(--character-spacing-0);
-}
-
-.inner-card-title {
-  font-style: var(--font-style-normal);
-  font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-18);
-  line-height: var(--line-spacing-24);
-  letter-spacing: var(--character-spacing-0);
-  text-transform: var(--text-transform-titlecase);
-}
-
-.body-emphasized {
-  font-style: var(--font-style-normal);
-  font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-14);
-  line-height: var(--line-spacing-19);
-  letter-spacing: var(--character-spacing-0);
-}
-
-.body-secondary-info {
-  font-style: var(--font-style-normal);
-  font-weight: var(--font-weight-normal);
-  font-size: var(--font-size-14);
-  line-height: var(--line-spacing-19);
-  letter-spacing: var(--character-spacing-0);
-  color: var(--text-secondary);
-}
-
-.body-regular {
-  font-style: var(--font-style-normal);
-  font-weight: var(--font-weight-normal);
-  font-size: var(--font-size-14);
-  line-height: var(--line-spacing-19);
-  letter-spacing: var(--character-spacing-0);
 }
 
 /* SVG Classes */

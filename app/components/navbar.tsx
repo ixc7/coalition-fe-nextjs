@@ -39,7 +39,7 @@ export const NavBar = () => (
       />
       <div className="mr-3 pr-3 border-r border-color-1">
         <p className="font-bold">Dr. Jose Simmons</p>
-        <p>General Practitioner</p>
+        <p className="text-secondary">General Practitioner</p>
       </div>
       <div className="aspect-square w-5 mr-3 settings-icon" />
       <div className="h-5 w-1 more-vertical-icon" />

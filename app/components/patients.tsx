@@ -9,7 +9,8 @@ export const Patients = () => (
 
     <div className="mt-10 max-h-[1000px] overflow-y-scroll">
       {apiData.map(({ name, gender, age, profile_picture }) => (
-        <div className="relative flex items-center py-4 px-5 patient-card">
+        <div
+          className={`relative flex items-center py-4 px-5 ${name === "Jessica Taylor" ? "bg-active-2" : "patient-card"}`}>
           <div
             className="w-12 h-12 rounded-full mr-3"
             style={{

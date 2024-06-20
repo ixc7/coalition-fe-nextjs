@@ -25,20 +25,20 @@ export const DiagnosisHistory = () => (
         <div className="col-span-1">
           <div className="flex items-center gap-1 mb-2">
             <div className="w-3.5 h-3.5 bg-[#E66FD2] rounded-full" />
-            <h2 className="font-bold text-[0.875rem]">Systolic</h2>
+            <h2 className="font-bold">Systolic</h2>
           </div>
           <p className="text-[1.375rem] font-bold mb-2">{systolic.value}</p>
-          <p className="text-[0.875rem]">{systolic.levels}</p>
+          <p>{systolic.levels}</p>
 
           <hr className="my-[1.125rem]" />
 
           <div className="flex items-center gap-1 mb-2">
             <div className="w-3.5 h-3.5 bg-[#8C6FE6] rounded-full" />
-            <h2 className="font-bold text-[0.875rem]">Diastolic</h2>
+            <h2 className="font-bold">Diastolic</h2>
           </div>
 
           <p className="text-[1.375rem] font-bold mb-2">{diastolic.value}</p>
-          <p className="text-[0.875rem]">{diastolic.levels}</p>
+          <p>{diastolic.levels}</p>
         </div>
       </div>
 
@@ -49,11 +49,11 @@ export const DiagnosisHistory = () => (
             backgroundImage: "url('./respiratory rate.svg')",
           }}
         />
-        <p>Respiratory Rate</p>
+        <p className="mt-4 text-base">Respiratory Rate</p>
         <h1 className="text-3xl font-extrabold">
           {respiratory_rate.value} bpm
         </h1>
-        <p>{respiratory_rate.levels}</p>
+        <p className="mt-4">{respiratory_rate.levels}</p>
       </div>
 
       <div className="col-span-1 aspect-square p-4 rounded-xl bg-[#FFE6E9]">
@@ -63,9 +63,9 @@ export const DiagnosisHistory = () => (
             backgroundImage: "url('./temperature.svg')",
           }}
         />
-        <p>Temperature</p>
+        <p className="mt-4 text-base">Temperature</p>
         <h1 className="text-3xl font-extrabold">{temperature.value}°F</h1>
-        <p>{temperature.levels}</p>
+        <p className="mt-4">{temperature.levels}</p>
       </div>
 
       <div className="col-span-1 aspect-square p-4 rounded-xl bg-[#FFE6F1]">
@@ -75,9 +75,9 @@ export const DiagnosisHistory = () => (
             backgroundImage: "url('./heartBPM.svg')",
           }}
         />
-        <p>Heart Rate</p>
+        <p className="mt-4 text-base">Heart Rate</p>
         <h1 className="text-3xl font-extrabold">{heart_rate.value} bpm</h1>
-        <p>{heart_rate.levels}</p>
+        <p className="mt-4">{heart_rate.levels}</p>
       </div>
     </div>
   </div>
