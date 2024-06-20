@@ -10,13 +10,12 @@ export const NavBar = () => (
   <div
     className="
     col-span-full bg-white px-8 py-4 
-    grid grid-cols-subgrid gap-8
     rounded-[4.375rem] shadow-sm
+    flex justify-between items-center
   ">
-    <div className="col-span-3">
-      <div className="h-12 test-logo"></div>
-    </div>
-    <div className="col-span-6 flex justify-around gap-2 px-5">
+    <div className="h-12 w-full max-w-[210px] test-logo" />
+
+    <div className="flex justify-around gap-2 px-5">
       <NavButton icon="home-icon">Overview</NavButton>
       <NavButton
         icon="patients-icon"
@@ -28,7 +27,7 @@ export const NavBar = () => (
       <NavButton icon="credit-card-icon">Transactions</NavButton>
     </div>
 
-    <div className="col-span-3 flex items-center justify-end">
+    <div className="flex items-center justify-end">
       <div
         className="h-12 w-12 rounded-full mr-2"
         style={{
