@@ -99,7 +99,7 @@ export const DiagnosisHistory = ({ apiData }) => {
           <div
             className="w-24 h-24 rounded-full bg-cover"
             style={{
-              backgroundImage: "url('./heartBPM.svg')",
+              backgroundImage: "url('./HeartBPM.svg')",
             }}
           />
           <p className="mt-4 text-base">Heart Rate</p>
