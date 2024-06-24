@@ -45,20 +45,25 @@ export const LineChart = ({ apiData }) => {
       .map(({ month, year }) => `${month}, ${year}`)
       .toReversed()
       .slice(-6),
+
     datasets: [
       {
         label: "Systolic",
         data: diagnosis_history
+          .toReversed()
           .map((i) => i.blood_pressure.systolic.value)
-          .toReversed(),
+          .slice(-6),
+
         borderColor: "#E66FD2",
         tension: 0.35,
       },
       {
         label: "Diastolic",
         data: diagnosis_history
+          .toReversed()
           .map((i) => i.blood_pressure.diastolic.value)
-          .toReversed(),
+          .slice(-6),
+
         borderColor: "#8C6FE6",
         tension: 0.35,
       },
